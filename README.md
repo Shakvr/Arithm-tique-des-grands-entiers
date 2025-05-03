@@ -1,4 +1,4 @@
-# Arithm-tique-des-grands-entiers
+# Arithmetique-des-grands-entiers
 Fonction Addition et multiplication en n'utiliant que des strings et sans operations de base du language (+ , x )
 
 Le sujet de ce projet est lie aux problematiques de l'arithmetique des grands entiers, en effet si l'on code des entiers dans une base quelconque, par exemple la base 2 dans un ordinateur, les algorithmes d'addition ou de multiplication ne sont pas exacts des que nos entiers deviennent trop grands (ou trop dissemblables en taille) et le type de representation/codage choisi sur l'ordinateur ne permet plus d'obtenir un resultat exact. L'idee est donc de proposer des algorithmes permettant d'avoir une precision parfaite sur des nombres de taille quelconque.
@@ -36,5 +36,5 @@ Exemple : `string_to_list("123")` retourne `["1"; "2"; "3"]`. Cette étape est c
 ### **IV- Fonction Multiplication** :
 Pour la fonction `multiplication`, j'ai d'abord essayé de trouver une forme générale de la multiplication en utilisant mes fonctions déjà codées. Je suis donc arrivé à cette expression, que j'ai simplement traduite en langage OCaml :
 
-$$x \cdot y = \begin{cases}0 & \text{si } y = 0 \quad \text{(cas de base)}, \\x + (x \cdot P(y)) & \text{sinon}. \end{cases}$$
+$$x \cdot y = \begin{cases}0 & \text{si } y = 0 \quad \text{(cas de base)}, \x + (x \cdot P(y)) & \text{sinon}. \end{cases}$$
 	
