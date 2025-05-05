@@ -32,9 +32,25 @@ La fonction `string_to_list` convertit une chaîne de caractères (représentant
 
 Exemple : `string_to_list("123")` retourne `["1"; "2"; "3"]`. Cette étape est cruciale pour manipuler les chiffres individuellement lors des opérations arithmétiques.
 
+#### **FONCTION PRÉDÉCESSEUR** :
+
+
+Pour créer la fonction prédécesseur, je suis parti d’un raisonnement simple :
+Si $s(y)=x$,  alors $y=p(x)$ , où s est le successeur et p le prédécesseur.
+
+ si je connais la fonction successeur, je peux m’en servir pour retrouver le prédécesseur d’un nombre. L’idée algorithmique est la suivante : je démarre à "0" et j’applique le successeur de manière récursive jusqu’à ce que le résultat corresponde au nombre donné. À ce moment-là, le nombre juste avant correspond au prédécesseur. Cela revient à effectuer une recherche linéaire sur la suite des successeurs, ce qui rend la fonction simple à comprendre et à coder. En plus, cette méthode me permet de réutiliser une fonction déjà testée, ce qui rend mon code plus fiable.
+
+#### **FONCTION ADDITION** :
+
+Pour la fonction addition, j’ai choisi une approche récursive également, mais basée sur des opérations élémentaires. L’algorithme repose sur l’idée que additionner x et y revient à incrémenter x autant de fois qu’on peut décrémenter y.
+
+$$x+y=(x+1)+(y−1),$$ jusqu’à ce que $y=0$.
+
+ Tant que y est différent de "0", j'incrémente x (avec successeur) et je décrémente y (avec prédécesseur). À la fin de la récursion, lorsque y = "0", la valeur de x correspond à la somme. Cette méthode met en valeur la composition de fonctions simples et la maîtrise du raisonnement récursif.
+
 
 ### **IV- Fonction Multiplication** :
 Pour la fonction `multiplication`, j'ai d'abord essayé de trouver une forme générale de la multiplication en utilisant mes fonctions déjà codées. Je suis donc arrivé à cette expression, que j'ai simplement traduite en langage OCaml :
 
-$$x \cdot y = \begin{cases}0 & \text{si } y = 0 \quad \text{(cas de base)}, \x + (x \cdot P(y)) & \text{sinon}. \end{cases}$$
+$$x \cdot y = \begin{cases}0 & \text{si } y = 0 \quad \text{(cas de base)}, \\x + (x \cdot P(y)) & \text{sinon}. \end{cases}$$
 	
