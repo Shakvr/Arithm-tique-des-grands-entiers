@@ -3,12 +3,10 @@ open List ;;
 
 let int_digits : string list = ["1";"2";"3";"4";"5";"6";"7";"8";"9"] ;; (*Liste des chiffres de 1 à 9  en base 10*)
 
-(*nabil*)
 let string_to_list( s : string) : string list =
   s |> String.to_seq |> Seq.map (fun c -> String.make 1 c) |> List.of_seq
 ;; (*Convertit une chaîne de cractères en liste de chaines de caractères*)
 
-(*nabil*)
 let lst ( p_list : string list ) : string = 
     (*-----------------fonction recursive---------------------*)
    let rec lst_aux (p_list : 'a list ) : 'a =
@@ -22,7 +20,6 @@ let lst ( p_list : string list ) : string =
 
 
 
-(*Nabil*)
  let  rem_lst ( p_list : string list ) : string list =
 (*-----------------fonction recursive---------------------*)
   let rec rem_lst_aux ( p_list : 'a list ) : 'a list =
@@ -35,7 +32,6 @@ let lst ( p_list : string list ) : string =
     rem_lst_aux( p_list)
 ;; (*fonction qui enlève le dernierelement d'une liste*)
 
-(*Nabil*)
 let rec digit_successeur (p_n, p_digits: string * string list) : string = (*fonction sucesseur appliqué sur les chiffres uniquement *)
     if p_n = "0" then 
         hd (p_digits)  
@@ -47,7 +43,6 @@ let rec digit_successeur (p_n, p_digits: string * string list) : string = (*fonc
         digit_successeur (p_n, tl(p_digits))       
 ;;   
 
-(*nabil*)
 let  successeur (p_n, p_digits: string * string list) : string =
     let n = string_to_list p_n in 
     
@@ -84,7 +79,7 @@ successeur("65985", int_digits) ;;
 
 
 
-(*Arshad*)
+
 let predecesseur (p_n, p_digits: string * string list) : string =
   let rec find_predecessor (current, target, digits: string * string * string list) : string =
     if successeur (current, digits) = target then current
@@ -116,7 +111,6 @@ predecesseur ("100", int_digits) ;; (* -> "99" *)
 
 
 
-(*Nabil*)
 
 let rec multiplication (p_x, p_y, p_digits : string * string * string list) : string = 
   if p_y = "0" then
